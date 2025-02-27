@@ -11,9 +11,9 @@ export default function Projects() {
       title: "Planeadito",
       description:
         "Digital catalog connecting suppliers across Mexico with potential customers, facilitating B2B commerce.",
-      image: "/img/projects/planeadito.webp",
+      image: "/planeadito.png",
       technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
-      gradient: "from-blue-400 to-purple-500",
+      gradient: "",
       link: "#",
     },
     {
@@ -21,41 +21,11 @@ export default function Projects() {
       title: "Talk to Santa",
       description:
         "Santa Claus calling service that brought joy to hundreds of children during the holiday season.",
-      image: "/img/projects/santa.webp",
+      image: "/santa-mockup.png",
       technologies: ["Next.js", "Node.js", "Bland"],
-      gradient: "from-red-400 to-red-600",
+      gradient: "",
       link: "#",
-    },
-    {
-      id: 3,
-      title: "Predep",
-      description:
-        "Sports prediction application that uses artificial intelligence to analyze and predict sports event results.",
-      image: "/img/projects/predep.webp",
-      technologies: ["Next.js", "Tailwind CSS", "MongoDB"],
-      gradient: "from-gray-700 to-gray-900",
-      link: "#",
-    },
-    {
-      id: 4,
-      title: "Fintech Dashboard",
-      description:
-        "Comprehensive financial management dashboard with real-time analytics and transaction tracking.",
-      image: "/img/projects/fintech.webp",
-      technologies: ["Next.js", "Chart.js", "Supabase"],
-      gradient: "from-emerald-400 to-teal-500",
-      link: "#",
-    },
-    {
-      id: 5,
-      title: "E-Learning Platform",
-      description:
-        "Interactive learning platform with course management, video lessons, and progress tracking.",
-      image: "/img/projects/elearning.webp",
-      technologies: ["Next.js", "Firebase", "Tailwind CSS"],
-      gradient: "from-amber-400 to-orange-500",
-      link: "#",
-    },
+    }
   ];
 
   return (
@@ -86,36 +56,15 @@ export default function Projects() {
 // Project card component
 function ProjectCard({ project }) {
   return (
-    <div className="group bg-gray-900 rounded-xl overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl">
-      {/* Project image with gradient overlay */}
-      <div
-        className={`relative h-64 w-full overflow-hidden bg-gradient-to-br ${project.gradient}`}
-      >
-        <div className="absolute inset-0 flex items-center justify-center p-6">
-          {/* Fallback for missing images */}
-          <div className="relative w-full h-48 mx-auto">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-contain"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = `https://placehold.co/600x400/1f2937/${
-                  project.gradient.includes("red")
-                    ? "f87171"
-                    : project.gradient.includes("blue")
-                    ? "60a5fa"
-                    : project.gradient.includes("emerald")
-                    ? "34d399"
-                    : project.gradient.includes("amber")
-                    ? "fbbf24"
-                    : "9ca3af"
-                }?text=${project.title}`;
-              }}
-            />
-          </div>
-        </div>
+    <div className="group bg-gray-900 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
+      {/* Project image */}
+      <div className={`relative h-80 w-full overflow-hidden`}>
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover"
+        />
       </div>
 
       {/* Project info */}
