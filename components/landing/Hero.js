@@ -11,7 +11,7 @@ export default function Hero() {
         {/* Left content area */}
         <div className="w-full lg:w-1/2 z-10 space-y-6">
           <p className="text-sm md:text-base font-medium flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-[#FEA38E] to-[#FBA2AB]">
-            <span className="text-transparent">&lt;/&gt;</span> Full Stackk
+            <span className="text-transparent">&lt;/&gt;</span> Full Stack
             Developer
           </p>
 
