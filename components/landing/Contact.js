@@ -46,21 +46,21 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 bg-gray-900 text-white">
+    <section className="py-10 bg-white text-[#FBA2AB]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-md mx-auto text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Contact Me.</h2>
           <p className="text-lg">
             You can reach me via email.{" "}
-            <a href="#" className="text-purple-400">LinkedIn</a> or{" "}
-            <a href="#" className="text-purple-400">Twitter</a> if you'd like to connect.
+            <a href="#" className="text-[#FBA2AB]">LinkedIn</a> or{" "}
+            <a href="#" className="text-[#FBA2AB]">Twitter</a> if you'd like to connect.
           </p>
         </div>
 
-        <div className="bg-gray-800 p-8 rounded-lg shadow-lg max-w-md mx-auto">
+        <div className="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto">
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div></div>
-              <label htmlFor="email" className="block text-sm font-medium">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-[#FBA2AB]">
                 Email
               </label>
               <input
@@ -70,7 +70,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="mt-1 block w-full p-3 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring focus:ring-purple-500"
+                className="mt-1 block w-full p-3 bg-white border border-[#FBA2AB] rounded-md focus:outline-none focus:ring focus:ring-[#FBA2AB]"
                 placeholder="elfora.dev@gmail.com"
               />
             </div>
@@ -78,7 +78,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full py-3 px-6 rounded-lg bg-purple-500 hover:bg-purple-600 text-white font-medium transition-all flex items-center justify-center ${
+              className={`w-full py-3 px-6 rounded-lg bg-[#FBA2AB] hover:bg-[#FEA38E] text-white font-medium transition-all flex items-center justify-center ${
                 isSubmitting ? "opacity-70 cursor-not-allowed" : ""
               }`}
             >

@@ -14,7 +14,7 @@ export default function Projects() {
       image: "/planeadito.png",
       technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
       gradient: "",
-      link: "#",
+      link: "https://www.planeadito.com/",
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export default function Projects() {
       image: "/santa-mockup.png",
       technologies: ["Next.js", "Node.js", "Bland"],
       gradient: "",
-      link: "#",
+      link: "https://www.hablarconsanta.com/",
     }
   ];
 
