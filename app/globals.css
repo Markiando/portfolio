@@ -17,7 +17,23 @@
 .animate-gradient {
   background: linear-gradient(270deg, #B0183D, #E23C64, #FF5E5E, #FCEDD8);
   background-size: 400% 400%;
-  animation: gradient-animation 10s ease infinite;
+  animation: gradient-animation 5s ease infinite;
+}
+
+/* Efecto de desplazamiento */
+.btn-gradient {
+  background: linear-gradient(90deg, #FFD464, #FF5E5E);
+  background-size: 200% 200%;
+  transition: transform 0.3s ease, background-position 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  background-position: 100% 50%;
+}
+
+.btn-gradient:active {
+  transform: translateY(1px);
 }
 
 

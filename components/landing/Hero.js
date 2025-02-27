@@ -34,13 +34,13 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="#projects"
-              className="bg-yellow hover:bg-light-pink text-white px-6 py-3 rounded-full flex items-center gap-2 transition-all"
+              className="btn-gradient text-white px-6 py-3 rounded-full flex items-center gap-2 transition-all"
             >
               View Projects <span className="ml-1">&rarr;</span>
             </a>
             <a
               href="#contact"
-              className="border border-white hover:border-yellow text-white px-6 py-3 rounded-full transition-all"
+              className="btn-gradient text-white px-6 py-3 rounded-full flex items-center gap-2 transition-all"
             >
               Contact
             </a>
@@ -83,10 +83,6 @@ export default function Hero() {
         {/* Right image area */}
         <div className="w-full lg:w-1/2 relative mt-10 lg:mt-0">
           <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
-            <div className="absolute bottom-4 right-4 bg-black/80 text-white px-4 py-2 rounded-full backdrop-blur-sm z-20 flex items-center gap-2">
-              <span className="text-yellow">&lt;/&gt;</span> +2 years of
-              experience
-            </div>
             <img
               src="/profile.jpg"
               alt="Developer profile"
