@@ -8,9 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        // Cool color palette
+        'light-pink': '#FCEDD8', // HEX: FCEDD8
+        'yellow': '#FFD464',     // HEX: FFD464
+        'soft-red': '#FF5E5E',   // HEX: FF5E5E
+        'coral': '#E23C64',      // HEX: E23C64
+        'dark-red': '#B0183D',   // HEX: B0183D
       },
     },
   },

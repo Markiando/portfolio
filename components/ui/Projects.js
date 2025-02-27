@@ -63,14 +63,26 @@ function ProjectCard({ project }) {
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 
       {/* Project info */}
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-        <p className="text-gray-400 mb-4 h-20">{project.description}</p>
+        <h3
+          className={`text-xl font-bold mb-2 transition-colors duration-300 ${
+            project.title === "Planeadito" ? "bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent" : "bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text text-transparent"
+          }`}
+        >
+          {project.title}
+        </h3>
+        <p
+          className={`mb-4 h-20 transition-colors duration-300 ${
+            project.title === "Planeadito" ? "bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent" : "bg-gradient-to-r from-red-500 to-yellow-500 bg-clip-text text-transparent"
+          }`}
+        >
+          {project.description}
+        </p>
 
         {/* Technologies */}
         <div className="flex flex-wrap gap-2 mb-4">

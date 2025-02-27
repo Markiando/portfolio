@@ -2,26 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-gradient {
+  background: linear-gradient(270deg, #B0183D, #E23C64, #FF5E5E, #FCEDD8);
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+

@@ -1,45 +1,46 @@
 "use client";
 
 import Image from "next/image";
-
+import '../../app/globals.css';
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-black text-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Main content container */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+      <div className="absolute inset-0 animate-gradient" />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center relative z-10">
         {/* Left content area */}
         <div className="w-full lg:w-1/2 z-10 space-y-6">
-          <p className="text-sm md:text-base font-medium flex items-center gap-2">
-            <span className="text-purple-500">&lt;/&gt;</span> Full Stack
+          <p className="text-sm md:text-base font-medium flex items-center gap-2 text-white">
+            <span className="text-yellow">&lt;/&gt;</span>
             Developer
           </p>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            Transforming ideas
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
+            Bringing ideas
             <br />
-            into{" "}
-            <span className="text-purple-500">
-              digital
+            to life{" "}
+            <span className="bg-gradient-to-r from-yellow to-soft-red bg-clip-text text-transparent">
+            through code
               <br />
-              experiences
+              
             </span>
           </h1>
 
-          <p className="text-gray-400 text-base md:text-lg max-w-xl">
-            Full Stack Developer specialized in creating modern and elegant web
-            applications. Focused on user experience and performance.
+          <p className="text-white text-base md:text-lg max-w-xl">
+          Developer crafting interactive, high-performance web solutions. 
+          Passionate about backend, scalability, and seamless user experiences.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="#projects"
-              className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-full flex items-center gap-2 transition-all"
+              className="bg-yellow hover:bg-light-pink text-white px-6 py-3 rounded-full flex items-center gap-2 transition-all"
             >
               View Projects <span className="ml-1">&rarr;</span>
             </a>
             <a
               href="#contact"
-              className="border border-gray-700 hover:border-gray-500 text-white px-6 py-3 rounded-full transition-all"
+              className="border border-white hover:border-yellow text-white px-6 py-3 rounded-full transition-all"
             >
               Contact
             </a>
@@ -48,7 +49,7 @@ export default function Hero() {
           <div className="flex items-center gap-6 pt-8">
             <a
               href="https://github.com"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-white hover:text-yellow transition-colors"
             >
               <svg
                 className="w-6 h-6"
@@ -65,7 +66,7 @@ export default function Hero() {
             </a>
             <a
               href="https://linkedin.com"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-white hover:text-yellow transition-colors"
             >
               <svg
                 className="w-6 h-6"
@@ -83,7 +84,7 @@ export default function Hero() {
         <div className="w-full lg:w-1/2 relative mt-10 lg:mt-0">
           <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
             <div className="absolute bottom-4 right-4 bg-black/80 text-white px-4 py-2 rounded-full backdrop-blur-sm z-20 flex items-center gap-2">
-              <span className="text-purple-500">&lt;/&gt;</span> +2 years of
+              <span className="text-yellow">&lt;/&gt;</span> +2 years of
               experience
             </div>
             <img
@@ -101,7 +102,7 @@ export default function Hero() {
       </div>
 
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black to-black/90 pointer-events-none" />
+      <div className="absolute inset-0 animate-gradient pointer-events-none" />
     </section>
   );
 }
