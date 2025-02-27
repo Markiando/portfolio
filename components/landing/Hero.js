@@ -6,41 +6,41 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-white">
       {/* Main content container */}
-      <div className="absolute inset-0 animate-gradient" />
+      <div className="absolute inset-0 bg-white" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center relative z-10">
         {/* Left content area */}
         <div className="w-full lg:w-1/2 z-10 space-y-6">
           <p className="text-sm md:text-base font-medium flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-[#FEA38E] to-[#FBA2AB]">
-            <span className="text-transparent">&lt;/&gt;</span> Full Stack
+            <span className="text-transparent">&lt;/&gt;</span>
             Developer
           </p>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#FEA38E] to-[#FBA2AB]">
-            Transforming ideas
+            Bringing ideas
             <br />
-            into{" "}
+            to life{" "}
             <span className="bg-gradient-to-r from-[#FEA38E] to-[#FBA2AB] bg-clip-text text-transparent">
-              digital
+              through code
               <br />
-              experiences
+            
             </span>
           </h1>
 
-          <p className="text-[#F6E6D0] text-base md:text-lg max-w-xl">
-            Full Stack Developer specialized in creating modern and elegant web
-            applications. Focused on user experience and performance.
+          <p className="text-[#FBA2AB] text-base md:text-lg max-w-xl">
+          Developer passionate about building user-friendly applications
+          with modern technologies and clean code.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="#projects"
-              className="bg-transparent border border-[#FBA2AB] hover:bg-[#FBA2AB] text-[#FBA2AB] px-6 py-3 rounded-full flex items-center gap-2 transition-all"
-            >
+              className="btn-gradient text-white px-6 py-3 rounded-full transition-all transform hover:scale-105"
+              >
               View Projects <span className="ml-1">&rarr;</span>
             </a>
             <a
               href="#contact"
-              className="bg-transparent border border-[#FEA38E] hover:bg-[#FEA38E] text-white px-6 py-3 rounded-full transition-all"
+              className="btn-gradient text-white px-6 py-3 rounded-full transition-all transform hover:scale-105"
             >
               Contact
             </a>
@@ -83,10 +83,6 @@ export default function Hero() {
         {/* Right image area */}
         <div className="w-full lg:w-1/2 relative mt-10 lg:mt-0">
           <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
-            <div className="absolute bottom-4 right-4 bg-[#FBA2AB]/80 text-white px-4 py-2 rounded-full backdrop-blur-sm z-20 flex items-center gap-2">
-              <span className="text-[#FEA38E]">&lt;/&gt;</span> +2 years of
-              experience
-            </div>
             <img
               src="/profile.jpg"
               alt="Developer profile"
@@ -102,7 +98,8 @@ export default function Hero() {
       </div>
 
       {/* Background gradient */}
-      <div className="absolute inset-0 animate-gradient pointer-events-none" />
+      {/* <div className="absolute inset-0 animate-gradient pointer-events-none" /> */}
+      <div className="absolute inset-0 bg-white pointer-events-none" />
     </section>
   );
 }

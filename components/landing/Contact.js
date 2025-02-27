@@ -4,9 +4,7 @@ import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
-    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,9 +30,7 @@ export default function Contact() {
         message: "¡Mensaje enviado! Te contactaré pronto.",
       });
       setFormData({
-        name: "",
         email: "",
-        message: "",
       });
     } catch (error) {
       setSubmitStatus({
@@ -52,18 +48,18 @@ export default function Contact() {
   return (
     <section className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center mb-12">
+        <div className="max-w-md mx-auto text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Contact Me.</h2>
           <p className="text-lg">
-            You can reach me via email or through my social media.{" "}
+            You can reach me via email.{" "}
             <a href="#" className="text-purple-400">LinkedIn</a> or{" "}
             <a href="#" className="text-purple-400">Twitter</a> if you'd like to connect.
           </p>
         </div>
 
-        <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <div className="bg-gray-800 p-8 rounded-lg shadow-lg max-w-md mx-auto">
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
+            <div></div>
               <label htmlFor="email" className="block text-sm font-medium">
                 Email
               </label>

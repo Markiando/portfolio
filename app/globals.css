@@ -22,9 +22,10 @@
 
 /* Efecto de desplazamiento */
 .btn-gradient {
-  background: linear-gradient(90deg, #FFD464, #FF5E5E);
+  background: linear-gradient(90deg, #FEA38E, #FBA2AB, #F6E6D0);
   background-size: 200% 200%;
   transition: transform 0.3s ease, background-position 0.3s ease;
+  animation: gradient-animation 5s ease infinite;
 }
 
 .btn-gradient:hover {
