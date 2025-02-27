@@ -4,43 +4,43 @@ import Image from "next/image";
 import '../../app/globals.css';
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-white">
       {/* Main content container */}
       <div className="absolute inset-0 animate-gradient" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center relative z-10">
         {/* Left content area */}
         <div className="w-full lg:w-1/2 z-10 space-y-6">
-          <p className="text-sm md:text-base font-medium flex items-center gap-2 text-white">
-            <span className="text-yellow">&lt;/&gt;</span>
+          <p className="text-sm md:text-base font-medium flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-[#FEA38E] to-[#FBA2AB]">
+            <span className="text-transparent">&lt;/&gt;</span> Full Stack
             Developer
           </p>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-            Bringing ideas
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#FEA38E] to-[#FBA2AB]">
+            Transforming ideas
             <br />
-            to life{" "}
-            <span className="bg-gradient-to-r from-yellow to-soft-red bg-clip-text text-transparent">
-            through code
+            into{" "}
+            <span className="bg-gradient-to-r from-[#FEA38E] to-[#FBA2AB] bg-clip-text text-transparent">
+              digital
               <br />
-              
+              experiences
             </span>
           </h1>
 
-          <p className="text-white text-base md:text-lg max-w-xl">
-          Developer crafting interactive, high-performance web solutions. 
-          Passionate about backend, scalability, and seamless user experiences.
+          <p className="text-[#F6E6D0] text-base md:text-lg max-w-xl">
+            Full Stack Developer specialized in creating modern and elegant web
+            applications. Focused on user experience and performance.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="#projects"
-              className="btn-gradient text-white px-6 py-3 rounded-full flex items-center gap-2 transition-all"
+              className="bg-transparent border border-[#FBA2AB] hover:bg-[#FBA2AB] text-[#FBA2AB] px-6 py-3 rounded-full flex items-center gap-2 transition-all"
             >
               View Projects <span className="ml-1">&rarr;</span>
             </a>
             <a
               href="#contact"
-              className="btn-gradient text-white px-6 py-3 rounded-full flex items-center gap-2 transition-all"
+              className="bg-transparent border border-[#FEA38E] hover:bg-[#FEA38E] text-white px-6 py-3 rounded-full transition-all"
             >
               Contact
             </a>
@@ -49,7 +49,7 @@ export default function Hero() {
           <div className="flex items-center gap-6 pt-8">
             <a
               href="https://github.com"
-              className="text-white hover:text-yellow transition-colors"
+              className="text-[#FBA2AB] hover:text-[#FEA38E] transition-colors"
             >
               <svg
                 className="w-6 h-6"
@@ -66,7 +66,7 @@ export default function Hero() {
             </a>
             <a
               href="https://linkedin.com"
-              className="text-white hover:text-yellow transition-colors"
+              className="text-[#FBA2AB] hover:text-[#FEA38E] transition-colors"
             >
               <svg
                 className="w-6 h-6"
@@ -83,6 +83,10 @@ export default function Hero() {
         {/* Right image area */}
         <div className="w-full lg:w-1/2 relative mt-10 lg:mt-0">
           <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
+            <div className="absolute bottom-4 right-4 bg-[#FBA2AB]/80 text-white px-4 py-2 rounded-full backdrop-blur-sm z-20 flex items-center gap-2">
+              <span className="text-[#FEA38E]">&lt;/&gt;</span> +2 years of
+              experience
+            </div>
             <img
               src="/profile.jpg"
               alt="Developer profile"

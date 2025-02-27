@@ -15,7 +15,7 @@
 }
 
 .animate-gradient {
-  background: linear-gradient(270deg, #B0183D, #E23C64, #FF5E5E, #FCEDD8);
+  background: linear-gradient(270deg, #FEA38E, #FFDFD3, #FBA2AB, #F6E6D0, #F3B5A0);
   background-size: 400% 400%;
   animation: gradient-animation 5s ease infinite;
 }

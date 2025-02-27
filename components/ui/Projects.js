@@ -29,14 +29,15 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-black text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center overflow-hidden animate-gradient">
+      {/* Main content container */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Proyectos Destacados
           </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
+          <p className="text-white font-bold max-w-3xl mx-auto text-lg">
             Una selección de mis mejores proyectos, cada uno representando un
             desafío único y una solución innovadora.
           </p>
@@ -99,7 +100,7 @@ function ProjectCard({ project }) {
         {/* View project link */}
         <Link
           href={project.link}
-          className="inline-block text-sm text-purple-400 hover:text-purple-300 transition-colors"
+          className="inline-block text-sm text-yellow hover:text-yellow-300 transition-colors"
         >
           Ver proyecto →
         </Link>
