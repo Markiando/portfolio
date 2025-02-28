@@ -1,103 +1,56 @@
 "use client";
 
 import { useState } from "react";
+import 'font-awesome/css/font-awesome.min.css';
+
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    email: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitStatus({
-        success: true,
-        message: "¡Mensaje enviado! Te contactaré pronto.",
-      });
-      setFormData({
-        email: "",
-      });
-    } catch (error) {
-      setSubmitStatus({
-        success: false,
-        message: "Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.",
-      });
-    } finally {
-      setIsSubmitting(false);
-      setTimeout(() => {
-        setSubmitStatus(null);
-      }, 5000);
-    }
+  const handleClick = () => {
+    // This function can be used to set a submission status if needed
+    setSubmitStatus({
+      success: true,
+    });
   };
 
   return (
-    <section className="py-10 bg-white text-[#FBA2AB]">
+    
+    <section  id="contact"className="py-20 bg-white text-[#FBA2AB]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-md mx-auto text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Contact Me.</h2>
           <p className="text-lg">
             You can reach me via email.{" "}
-            <a href="#" className="text-[#FBA2AB]">LinkedIn</a> or{" "}
-            <a href="#" className="text-[#FBA2AB]">Twitter</a> if you'd like to connect.
+          if you'd like to connect.
           </p>
         </div>
 
-        <div className="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-[#FBA2AB]">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="mt-1 block w-full p-3 bg-white border border-[#FBA2AB] rounded-md focus:outline-none focus:ring focus:ring-[#FBA2AB]"
-                placeholder="elfora.dev@gmail.com"
-              />
-            </div>
+        <div className="bg-white p-8 rounded-lg shadow-2xl max-w-md mx-auto">
+          {/* Centered button */}
+          <div className="flex justify-center">
+            <a
+              href="mailto:laylagdev@gmail.com" // Mailto link to open email client
+              onClick={handleClick} // Optional: handle click for status
+              className="inline-flex items-center justify-center bg-[#FBA2AB] text-white py-3 px-6 rounded-full shadow-md hover:bg-[#FEA38E] transition-all"
+            >
+              <i className="fas fa-comment-dots mr-2"></i> {/* Message icon */}
+              Send Email
+            </a>
+          </div>
 
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className={`w-full py-3 px-6 rounded-lg bg-[#FBA2AB] hover:bg-[#FEA38E] text-white font-medium transition-all flex items-center justify-center ${
-                isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+          {/* Form submission status */}
+          {submitStatus && (
+            <div
+              className={`mt-4 p-4 rounded-lg ${
+                submitStatus.success
+                  ? ""
+                  : ""
               }`}
             >
-              {isSubmitting ? "Enviando..." : "Schedule a Call"}
-            </button>
-
-            {/* Form submission status */}
-            {submitStatus && (
-              <div
-                className={`mt-4 p-4 rounded-lg ${
-                  submitStatus.success
-                    ? "bg-green-500/10 text-green-400"
-                    : "bg-red-500/10 text-red-400"
-                }`}
-              >
-                {submitStatus.message}
-              </div>
-            )}
-          </form>
+              {submitStatus.message}
+            </div>
+          )}
         </div>
       </div>
     </section>
