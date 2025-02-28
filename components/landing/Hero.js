@@ -83,6 +83,7 @@ export default function Hero() {
         {/* Right image area */}
         <div className="w-full lg:w-1/2 relative mt-10 lg:mt-0">
           <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
+          {/*
             <img
               src="/download(1).jpeg"
               alt="Developer profile"
@@ -93,6 +94,7 @@ export default function Hero() {
                   "https://placehold.co/600x800/111827/6D28D9?text=Profile+Image";
               }}
             />
+            */}
           </div>
         </div>
       </div>
