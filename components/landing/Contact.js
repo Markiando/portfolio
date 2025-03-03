@@ -8,9 +8,9 @@ export default function Contact() {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleClick = () => {
-    // This function can be used to set a submission status if needed
     setSubmitStatus({
       success: true,
+      message: "¡Abriendo tu cliente de correo!",
     });
   };
 
@@ -22,7 +22,7 @@ export default function Contact() {
           <h2 className="text-4xl font-bold mb-4">Contact Me.</h2>
           <p className="text-lg">
             You can reach me via email.{" "}
-          if you'd like to connect.
+            If you would like to connect.
           </p>
         </div>
 
@@ -44,8 +44,8 @@ export default function Contact() {
             <div
               className={`mt-4 p-4 rounded-lg ${
                 submitStatus.success
-                  ? ""
-                  : ""
+                  ? "bg-green-500/10 text-green-400"
+                  : "bg-red-500/10 text-red-400"
               }`}
             >
               {submitStatus.message}
