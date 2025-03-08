@@ -65,7 +65,7 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              href="www.linkedin.com/in/layla-gill-franco-709bb5278"
+              href="https://www.linkedin.com/in/layla-gill-franco-709bb5278/"
               className="text-[#FBA2AB] hover:text-[#FEA38E] transition-colors"
             >
               <svg
@@ -83,9 +83,9 @@ export default function Hero() {
         {/* Right image area */}
         <div className="w-full lg:w-1/2 relative mt-10 lg:mt-0">
           <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
-          {/*
+          {
             <img
-              src="/download(1).jpeg"
+              src="/gif.gif"
               alt="Developer profile"
               className="w-full h-full object-cover rounded-lg"
               onError={(e) => {
@@ -94,7 +94,7 @@ export default function Hero() {
                   "https://placehold.co/600x800/111827/6D28D9?text=Profile+Image";
               }}
             />
-            */}
+            }
           </div>
         </div>
       </div>
