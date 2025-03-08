@@ -15,11 +15,17 @@ const geistMono = localFont({
 export const metadata = {
   title: "Portfolio",
   description: "Portfolio of a software engineer",
+  icons: {
+    icon: './bear.ico',
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/bear.ico" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
